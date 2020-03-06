@@ -1,0 +1,21 @@
+{
+  "name": "Stripe Checkout Demo",
+  "version": "0.9",
+  "options_page": "options.html",
+  "manifest_version": 2,
+  "description": "Demo for using Stripe Checkout in an extension.",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "favicon-16x16.png",
+    "32": "favicon-32x32.png",
+    "96": "favicon-96x96.png"
+  },
+  "permissions": ["declarativeContent", "storage"],
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://js.stripe.com/v3/; object-src 'self'"
+}
